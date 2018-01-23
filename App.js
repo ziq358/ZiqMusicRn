@@ -10,9 +10,10 @@ import {
   Text,
   View,
   Image,
+  InteractionManager,
 } from 'react-native';
 import styles from './AppStyles';
-
+import SplashScreen from 'react-native-splash-screen'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -22,13 +23,20 @@ const instructions = Platform.select({
 });
 
 export default class App extends Component<{}> {
+
+  componentDidMount() {
+    this.timer = setTimeout(() => {
+      InteractionManager.runAfterInteractions(() => {
+          SplashScreen.hide();
+      });
+    }, 2000);
+  }
+
   render() {
     return (
-      <View style={{}}>
-        <View style={[styles.height160, { flex: 1, backgroundColor: '#eb776a', padding: 5}]}>
-          <View style={{height: 100, flex: 1, backgroundColor: '#1F1F1F'}}></View>
-          <View ></View>
-        </View>
+      <View style={{ flex: 1, backgroundColor: '#1F1F1F'}}>
+        <View style={{ width: 50, height: 50, backgroundColor: '#eb776a'}} />
+        <View style={{width: 100, height: 100, backgroundColor: 'skyblue'}} />
       </View>
     );
   }
