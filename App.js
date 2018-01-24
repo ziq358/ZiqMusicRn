@@ -35,8 +35,10 @@ export default class App extends Component<{}> {
   render() {
     return (
       <View style={{ flex: 1, backgroundColor: '#1F1F1F'}}>
-        <View style={{ width: 50, height: 50, backgroundColor: '#eb776a'}} />
-        <View style={{width: 100, height: 100, backgroundColor: 'skyblue'}} />
+        <View style={{ flex: 1, maxHeight: 50, /*flex 会影响 宽高的设置， 用maxHeight 限制*/
+                        backgroundColor: '#eb776a' }}//背景 
+                        />{/* 一般注释, 用 {} 包围 */}
+        <View style={{width: 100, height: 100, backgroundColor: 'skyblue'}} />{/* 一般注释, 用 {} 包围 */}
       </View>
     );
   }
