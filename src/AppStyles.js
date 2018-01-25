@@ -1,6 +1,18 @@
 
 import { StyleSheet } from 'react-native';
 export default styles = StyleSheet.create({
+
+  redBackground: {
+    backgroundColor: '#C73536',
+  },
+
+
+
+
+
+
+
+
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -18,23 +30,21 @@ export default styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  row:{
+    backgroundColor: '#F5FCFF',
+      flexDirection: 'row',
+      paddingTop:20
+  },
 
+  height160:{
+      height: 160
+  },
 
-row:{
-  backgroundColor: '#F5FCFF',
-    flexDirection: 'row',
-    paddingTop:20
-},
-
-height160:{
-    height: 160
-},
-
-part_1_left:{
-    flex: 1,
-    borderColor: '#DCD7CD',
-    borderRightWidth: 5,
-    borderBottomWidth: 1,
-},
+  part_1_left:{
+      flex: 1,
+      borderColor: '#DCD7CD',
+      borderRightWidth: 5,
+      borderBottomWidth: 1,
+  },
 
 });

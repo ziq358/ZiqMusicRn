@@ -16,7 +16,7 @@ export default class RecommendScreen extends Component<{}> {
                         />{/* 一般注释, 用 {} 包围 */}
             <Text style={{ color: '#ffffff'}} onPress={()=>{
               const {navigate} = this.props.navigation;/*需要以这种方式来调方法，需要大括号*/
-              navigate('SongListScreen');
+              navigate('MusicScreen');
             }}>RecommendScreen</Text>
         <View style={{width: 100, height: 100, backgroundColor: 'skyblue'}} />{/* 一般注释, 用 {} 包围 */}
       </View>

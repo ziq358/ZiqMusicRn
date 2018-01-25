@@ -8,32 +8,15 @@ import {
 
 import {StackNavigator, TabNavigator, addNavigationHelpers} from 'react-navigation';
 
-import RecommendScreen from './RecommendScreen';
-import SongListScreen from './SongListScreen';
-import RankingListScreen from './RankingListScreen';
+import HomeScreen from './HomeScreen';
 
 export default MyApp = StackNavigator({
 
-  RecommendScreen :{
-    screen: RecommendScreen,
+  HomeScreen :{
+    screen: HomeScreen,
     navigationOptions:{
-      headerTitle: '个性推荐',
-      headerBackTitle: null,
+      //header: null, // 去掉actionBar 
       headerStyle: {backgroundColor: '#C73536'}
-    }
-  },
-  SongListScreen :{
-    screen: SongListScreen,
-    navigationOptions:{
-      headerTitle: '歌单',
-      headerBackTitle: null,
-    }
-  },
-  RankingListScreen :{
-    screen: RankingListScreen,
-    navigationOptions:{
-      headerTitle: '排行榜',
-      headerBackTitle: null,
     }
   },
 
