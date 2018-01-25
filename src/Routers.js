@@ -8,14 +8,24 @@ import {
 
 import {StackNavigator, TabNavigator, addNavigationHelpers} from 'react-navigation';
 
-import HomeScreen from './HomeScreen';
+import DrawerScreen from './DrawerScreen';
+import TestScreen1 from './TestScreen1';
 
-export default MyApp = StackNavigator({
+export default Routers = StackNavigator({
 
-  HomeScreen :{
-    screen: HomeScreen,
+  DrawerScreen :{
+    screen: DrawerScreen,
     navigationOptions:{
-      //header: null, // 去掉actionBar 
+      header: null, // 去掉actionBar 
+      // headerStyle: {backgroundColor: '#C73536'}
+    }
+  },
+
+  //在栈中，按名字跳转
+  TestScreen1 :{
+    screen: TestScreen1,
+    navigationOptions:{
+      header: null, // 去掉actionBar 
       headerStyle: {backgroundColor: '#C73536'}
     }
   },
