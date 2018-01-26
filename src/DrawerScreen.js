@@ -12,126 +12,127 @@ import {
 import {StackNavigator, TabNavigator, DrawerNavigator,DrawerItems ,} from 'react-navigation';
 
 import HomeScreen from './HomeTabScreen';
-import TestScreen1 from './TestScreen1';
+import DrawerMenuConstant from './DrawerMenuConstant';
 
 export default DrawerScreen = DrawerNavigator({
     HomeScreen :{
       screen: HomeScreen,
       navigationOptions:{
-        drawerLabel: '首页',
+        drawerLabel: () => null,//隐藏了一个Item
       }
     },
     HomeScreen1 :{
       screen: HomeScreen,
       navigationOptions:{
-        drawerLabel: '我的信息',
+        drawerLabel: DrawerMenuConstant.left_nav_my_message.label,
         drawerIcon: ({ tintColor }) => (
-          <Image source={require('./img/left_nav_my_message.png')}
-            style={{width: 24, height: 24}}/>),
+          <Image source={DrawerMenuConstant.left_nav_my_message.icon}
+            style={DrawerMenuConstant.ICON_STYLE}/>),
       }
     },
     HomeScreen2 :{
       screen: HomeScreen,
       navigationOptions:{
-        drawerLabel: '会员中心',
+        drawerLabel: DrawerMenuConstant.left_nav_vip_center.label,
         drawerIcon: ({ tintColor }) => (
-          <Image source={require('./img/left_nav_vip_center.png')}
-            style={{width: 24, height: 24}}/>),
+          <Image source={DrawerMenuConstant.left_nav_vip_center.icon}
+            style={DrawerMenuConstant.ICON_STYLE}/>),
       }
     },
     HomeScreen3 :{
       screen: HomeScreen,
       navigationOptions:{
-        drawerLabel: '商城',
+        drawerLabel: DrawerMenuConstant.left_nav_shopping_mall.label,
         drawerIcon: ({ tintColor }) => (
-          <Image source={require('./img/left_nav_shopping_mall.png')}
-            style={{width: 24, height: 24}}/>),
+          <Image source={DrawerMenuConstant.left_nav_shopping_mall.icon}
+            style={DrawerMenuConstant.ICON_STYLE}/>),
       }
     },
     HomeScreen4 :{
       screen: HomeScreen,
       navigationOptions:{
-        drawerLabel: '在线听歌免流量',
+        drawerLabel: DrawerMenuConstant.left_nav_listen_online.label,
         drawerIcon: ({ tintColor }) => (
-          <Image source={require('./img/left_nav_listen_online.png')}
-            style={{width: 24, height: 24}}/>),
+          <Image source={DrawerMenuConstant.left_nav_listen_online.icon}
+            style={DrawerMenuConstant.ICON_STYLE}/>),
       }
     },
     HomeScreen5 :{
       screen: HomeScreen,
       navigationOptions:{
-        drawerLabel: '听歌识曲',
+        drawerLabel: DrawerMenuConstant.left_nav_hear_song_to_find.label,
         drawerIcon: ({ tintColor }) => (
-          <Image source={require('./img/left_nav_hear_song_to_find.png')}
-            style={{width: 24, height: 24}}/>),
+          <Image source={DrawerMenuConstant.left_nav_hear_song_to_find.icon}
+            style={DrawerMenuConstant.ICON_STYLE}/>),
       }
     },
     HomeScreen6 :{
       screen: HomeScreen,
       navigationOptions:{
-        drawerLabel: '主题皮肤',
+        drawerLabel: DrawerMenuConstant.left_nav_theme_skin.label,
         drawerIcon: ({ tintColor }) => (
-          <Image source={require('./img/left_nav_theme_skin.png')}
-            style={{width: 24, height: 24}}/>),
+          <Image source={DrawerMenuConstant.left_nav_theme_skin.icon}
+            style={DrawerMenuConstant.ICON_STYLE}/>),
       }
     },
     HomeScreen7 :{
       screen: HomeScreen,
       navigationOptions:{
-        drawerLabel: '夜间模式',
+        drawerLabel: DrawerMenuConstant.left_nav_night_model.label,
         drawerIcon: ({ tintColor }) => (
-          <Image source={require('./img/left_nav_night_model.png')}
-            style={{width: 24, height: 24}}/>),
+          <Image source={DrawerMenuConstant.left_nav_night_model.icon}
+            style={DrawerMenuConstant.ICON_STYLE}/>),
       }
     },
     HomeScreen8 :{
       screen: HomeScreen,
       navigationOptions:{
-        drawerLabel: '定时停止播放',
+        drawerLabel: DrawerMenuConstant.left_nav_timer_to_stop.label,
         drawerIcon: ({ tintColor }) => (
-          <Image source={require('./img/left_nav_timer_to_stop.png')}
-            style={{width: 24, height: 24}}/>),
+          <Image source={DrawerMenuConstant.left_nav_timer_to_stop.icon}
+            style={DrawerMenuConstant.ICON_STYLE}/>),
       }
     },
     HomeScreen9 :{
       screen: HomeScreen,
       navigationOptions:{
-        drawerLabel: '扫一扫',
+        drawerLabel: DrawerMenuConstant.left_nav_scan.label,
         drawerIcon: ({ tintColor }) => (
-          <Image source={require('./img/left_nav_scan.png')}
-            style={{width: 24, height: 24}}/>),
+          <Image source={DrawerMenuConstant.left_nav_scan.icon}
+            style={DrawerMenuConstant.ICON_STYLE}/>),
       }
     },
     HomeScreen10 :{
       screen: HomeScreen,
       navigationOptions:{
-        drawerLabel: '我的音乐云盘',
+        drawerLabel: DrawerMenuConstant.left_nav_my_cloud.label,
         drawerIcon: ({ tintColor }) => (
-          <Image source={require('./img/left_nav_my_cloud.png')}
-            style={{width: 24, height: 24}}/>),
+          <Image source={DrawerMenuConstant.left_nav_my_cloud.icon}
+            style={DrawerMenuConstant.ICON_STYLE}/>),
       }
     },
     HomeScreen11 :{
       screen: HomeScreen,
       navigationOptions:{
-        drawerLabel: '音乐闹钟',
+        drawerLabel: DrawerMenuConstant.left_nav_alarm_clock.label,
         drawerIcon: ({ tintColor }) => (
-          <Image source={require('./img/left_nav_alarm_clock.png')}
-            style={{width: 24, height: 24}}/>),
+          <Image source={DrawerMenuConstant.left_nav_alarm_clock.icon}
+            style={DrawerMenuConstant.ICON_STYLE}/>),
       }
     },
     HomeScreen12 :{
       screen: HomeScreen,
       navigationOptions:{
-        drawerLabel: '驾驶模式',
+        drawerLabel: DrawerMenuConstant.left_nav_drive_model.label,
         drawerIcon: ({ tintColor }) => (
-          <Image source={require('./img/left_nav_drive_model.png')}
-            style={{width: 24, height: 24}}/>),
+          <Image source={DrawerMenuConstant.left_nav_drive_model.icon}
+            style={DrawerMenuConstant.ICON_STYLE}/>),
       }
     },
   },
   {
-     drawerWidth: 300, // 抽屉宽
+    backBehavior: 'none',//不回到初始页面
+    drawerWidth: 300, // 抽屉宽
     drawerPosition: 'left', // 抽屉在左边还是右边
     // contentComponent: CustomDrawerContentComponent,  // 自定义抽屉组件
     contentComponent: props => {
@@ -140,8 +141,11 @@ export default DrawerScreen = DrawerNavigator({
         return (
             <ScrollView>
                 <View>
-                    <View style={{paddingVertical: 20, paddingHorizontal: 15, backgroundColor:'#000'}}>
-                        <Text style={{color:'#FFF'}}>Header</Text>
+                    <View style={{}}>
+                        <Image source={DrawerMenuConstant.header_icon} 
+                        style={{width: 300,
+                                height: 150,
+                                }}/>
                     </View>
                     <DrawerItems {...props} />
                 </View>
@@ -150,9 +154,9 @@ export default DrawerScreen = DrawerNavigator({
     },
     contentOptions: {
       initialRouteName: 'HomeScreen', // 默认页面组件
-      activeTintColor: 'white',  // 选中文字颜色
-      inactiveTintColor: 'black',  // 未选中文字颜色
-      activeBackgroundColor: '#ff8500', // 选中背景颜色
+      activeTintColor: '#1f1f1f',  // 选中文字颜色
+      inactiveTintColor: '#1f1f1f',  // 未选中文字颜色
+      activeBackgroundColor: 'white', // 选中背景颜色
       inactiveBackgroundColor: 'white', // 未选中背景颜色
       style: {  // 样式
 

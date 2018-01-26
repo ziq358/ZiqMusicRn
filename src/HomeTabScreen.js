@@ -3,7 +3,10 @@ import {
   Platform,
   Text,
   View,
+  RCTView,
   Image,
+  Button,
+  TouchableWithoutFeedback,
 } from 'react-native';
 import {StackNavigator, TabNavigator, addNavigationHelpers} from 'react-navigation';
 import AppStyles from './AppStyles';
@@ -11,8 +14,8 @@ import DiscoverScreen from './home/DiscoverScreen';
 import MusicScreen from './home/MusicScreen';
 import FriendsScreen from './home/FriendsScreen';
 
-export default HomeTab = TabNavigator({
-    DiscoverScreen: {
+HomeTab = TabNavigator({
+    DiscoverScreen: {   
         screen: DiscoverScreen,
         navigationOptions:{
           tabBarLabel: '发现',
@@ -77,3 +80,40 @@ export default HomeTab = TabNavigator({
         // iconStyle:{}, // 图标的样式。
     }
 });
+
+HomeTab.navigationOptions = props => {
+  const { navigation } = props;
+  return {
+    headerStyle: {backgroundColor: '#C73536'},
+    // headerLeft: (
+    //     <View>
+    //         <TouchableWithoutFeedback  onPress={() => navigation.navigate('DrawerOpen')}>  
+    //             <Image source={require('./img/ic_hamberger.png')} style={{width: 20, height: 15, marginLeft:15}} />   
+    //         </TouchableWithoutFeedback>  
+    //     </View> 
+    // ),
+    header: ( /* Your custom header */
+        <View style={{height: 50, backgroundColor: '#C73536', flexDirection: 'row', alignItems:'center'}}>
+            <TouchableWithoutFeedback  onPress={() => navigation.navigate('DrawerOpen')}>  
+                 <Image source={require('./img/ic_hamberger.png')} style={{width: 23, height: 23, marginLeft:15}} />   
+            </TouchableWithoutFeedback>  
+            <TouchableWithoutFeedback  onPress={() => navigation.navigate('DiscoverScreen')}>  
+                 <Image source={require('./img/actionbar_discover_normal.png')} style={{width: 40, height: 40, marginLeft:85}} />   
+            </TouchableWithoutFeedback>
+            <TouchableWithoutFeedback  onPress={() => navigation.navigate('MusicScreen')}>  
+                 <Image source={require('./img/actionbar_music_normal.png')} style={{width: 40, height: 40, marginLeft:15}} />   
+            </TouchableWithoutFeedback>
+            <TouchableWithoutFeedback  onPress={() => navigation.navigate('FriendsScreen')}>  
+                 <Image source={require('./img/actionbar_friends_normal.png')} style={{width: 40, height: 40, marginLeft:15}} />   
+            </TouchableWithoutFeedback>
+        </View>
+    ),
+  };
+};
+
+export default HomeStack = StackNavigator({
+  HomeTab :{
+    screen: HomeTab,
+  },
+
+},{});
