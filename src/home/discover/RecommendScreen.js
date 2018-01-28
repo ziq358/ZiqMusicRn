@@ -6,14 +6,54 @@ import {
   Image,
   StyleSheet,
   Dimensions,
+  ListView,
 } from 'react-native';
 import Swiper from 'react-native-swiper';
 
+function getData(){
+    var data = ['SwiperType', 'row'];
+    return data
+}
 
 export default class RecommendScreen extends Component<{}> {
+  constructor(props){
+      super(props);
+      let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 != r2 });
+      this.state = {
+          dataSource : ds.cloneWithRows(getData()),
+      };
+  }
+
   render() {
     return (
-      <View style={{ flex: 1, backgroundColor: '#1F1F1F'}}>
+      <View style={{ flex: 1, backgroundColor: '#ffffff'}}>
+        <ListView style={{flex : 1}}
+            dataSource={this.state.dataSource}
+            renderRow={ 
+              this.renderRow
+            }
+        />
+      </View>
+    );
+  }
+
+  renderRow(rowData, sectionID, rowID){
+        switch(rowData){
+          case 'SwiperType':
+            return <SwiperType />
+        }
+        return null
+  }
+
+}
+
+class SwiperType extends Component<{}>{
+  constructor(props){
+     super(props);
+  }
+
+  render(){
+    return (
         <View style={{height: 150}}>
           <Swiper style={{}}
                   showsButtons={false} 
@@ -35,7 +75,6 @@ export default class RecommendScreen extends Component<{}> {
             </View>
           </Swiper>
         </View>
-      </View>
     );
   }
 }
