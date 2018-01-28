@@ -10,8 +10,6 @@ import {
 import Swiper from 'react-native-swiper';
 
 
-
-
 export default class RecommendScreen extends Component<{}> {
   render() {
     return (
